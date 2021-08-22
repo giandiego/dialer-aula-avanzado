@@ -12,7 +12,7 @@ Frontend application.
 
 # Endpoints
 
-[Doc](https://github.com/giandiego/api-base-mongo-jwt/blob/main/requests/prog.http)
+[Doc](https://documenter.getpostman.com/view/12373830/TzzDKEuh)
 
 # Install
 

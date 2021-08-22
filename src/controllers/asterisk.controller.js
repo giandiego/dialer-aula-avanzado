@@ -34,10 +34,12 @@ export const OriginateCall = async (req, res) => {
         }
 
         console.log(DataAMI);
-        while (10) {
-            let action = /*await*/ ActionAMI(DataAMI);
-        }
-        
+        // while (10) {
+        //     let action = /*await*/ ActionAMI(DataAMI);
+        // }
+
+        let action = await ActionAMI(DataAMI);
+
         res.json({ success: true, message: action });
 
     } catch (error) {

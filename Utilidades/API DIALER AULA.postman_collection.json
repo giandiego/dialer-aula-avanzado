@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "24a77fe0-b661-4950-8200-6ba3e6e7d5cb",
+		"_postman_id": "d8dd170f-6415-4674-b8e9-8a3c66c27415",
 		"name": "API BASE MONGO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -502,6 +502,50 @@
 				}
 			],
 			"description": "Es necesario realizar una autenticación del API para poder interactuar con la misma, luego de esto obtendres un token que podremos usar en posteriores consultas."
+		},
+		{
+			"name": "Asterisk",
+			"item": [
+				{
+					"name": "Send Call",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Action\": \"OriginateCall\",\r\n  \"Data\": {\r\n      \"ringtime\": \"30\",\r\n      \"code\": \"12345\",\r\n      \"phone\": \"9000\",\r\n      \"other\": \"lo que sea\",\r\n      \"nombre\": \"Harold\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/Manager/Call",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Manager",
+								"Call"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

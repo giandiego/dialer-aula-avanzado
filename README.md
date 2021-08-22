@@ -91,4 +91,4 @@ pm2 unstartup systemd
 ```
 
 # Info
-Gian Diego Javes Leccas
+Gian Diego Javes Lecca

@@ -52,17 +52,17 @@ sudo systemctl status mongod
 Clone project
 ```
 cd /opt/
-git clone https://github.com/giandiego/api-base-mongo-jwt.git
+git clone https://github.com/giandiego/dialer-aula-avanzado.git
 ```
 
 Install Dependencies
 ```
-cd /opt/api-base-mongo-jwt/
+cd /opt/dialer-aula-avanzado/
 npm install --force
 npm run build
 ```
 
-Edit enviroment variables in /opt/api-base-mongo-jwt/ (changues values)
+Edit enviroment variables in /opt/dialer-aula-avanzado/ (changues values)
 ```
 cp env-example .env
 ```
@@ -80,9 +80,9 @@ npm run dev
 
 Init pm2
 ```
-cd /opt/api-base-mongo-jwt/
+cd /opt/dialer-aula-avanzado/
 npm run build
-pm2 start dist/index.js --name api-base-mongo-jwt --time
+pm2 start dist/index.js --name dialer-aula-avanzado --time
 pm2 startup
 ```
 Remove init script via:

@@ -1,0 +1,24 @@
+# Entorno
+DOMAIN = test
+PORT = 4001
+SSL = false
+
+#RUTA DEL CERTIFICADO
+KEY = /etc/letsencrypt/live/${DOMAIN}/privkey.pem
+CERT =  /etc/letsencrypt/live/${DOMAIN}/cert.pem
+
+# Database
+MONGODB_DB = apibaseTest
+MONGODB_URI = mongodb://localhost/${MONGODB_DB}?retryWrites=true
+
+# Token
+USER_NAME = Api Base
+EMAIL = api.auth@apibase.com
+PASSWORD = ApiBase2021*!
+JWT_KEY = ApibPass123*
+
+# Asterisk Manager interface
+AMI_HOST = localhost
+AMI_USER = amiuser
+AMI_PASS = amipass
+AMI_PORT = 5038

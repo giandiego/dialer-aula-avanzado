@@ -1,0 +1,29 @@
+# @name login 
+
+@url =http://localhost:4500
+
+POST {{url}}/api/v1/Authorization/
+Content-Type: application/json
+
+{
+  "email": "dialer.auth@test.com",
+  "password": "pastest*!"
+}
+
+###
+@jwtoken = {{login.response.body.token}}
+
+### StatusDialer // para validar Authorization
+POST {{url}}/api/v1/prog/Status
+Content-Type: application/json
+Authorization: Bearer {{jwtoken}}
+
+{
+  "Action": "StatusDialer",
+  "campaignid":"601604e43a8fa12958d9cf18",
+  "_id": "601604e43a8fa12958d9cd34"
+}
+
+### Validar toda la data - Igual a monitoreo
+POST {{url}}/api/v1/manager/ReturnData
+Authorization: Bearer {{jwtoken}}

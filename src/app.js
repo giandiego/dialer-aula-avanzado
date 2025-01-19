@@ -77,8 +77,8 @@ app.use(
 );
 //Routes
 app.get("/", (req, res) => {
-  //res.json({ message: "WELCOME API BASE" });
-  res.status(403).json();
+  res.json({ message: "WELCOME API BASE" });
+  // res.status(403).json();
 });
 
 app.use("/api/v1/Authorization", Auth);

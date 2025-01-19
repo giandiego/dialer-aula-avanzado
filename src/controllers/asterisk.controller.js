@@ -33,6 +33,23 @@ export const OriginateCall = async (req, res) => {
             Variable: variables,
         }
 
+        // {
+        //     Action: 'Originate',
+        //     Channel: 'Local/1001@DIALER/n',
+        //     Context: 'ivr-tts-asr',
+        //     Exten: 's',
+        //     Priority: 1,
+        //     CallerID: '1001',
+        //     Async: 'true',
+        //     Variable: {
+        //       ringtime: '30',
+        //       CallerID: '999999999',
+        //       'CHANNEL(accountcode)': '12345',
+        //       other: 'lo que sea',
+        //       Nombre: 'Harold'
+        //     }
+        //   }
+
         console.log(DataAMI);
         // while (10) {
         //     let action = /*await*/ ActionAMI(DataAMI);

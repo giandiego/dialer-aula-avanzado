@@ -25,7 +25,7 @@ export const OriginateCall = async (req, res) => {
         let DataAMI = {
             Action: "Originate",
             Channel: "Local/" + i.phone + "@DIALER/n",
-            Context: "internal",
+            Context: "ivr-tts-asr",
             Exten: "s",
             Priority: 1,
             CallerID: i.phone,

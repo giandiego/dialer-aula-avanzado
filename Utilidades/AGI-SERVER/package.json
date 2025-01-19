@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "agi-server": "file:",
     "node-wit": "^6.0.1",
     "voxo-agi": "^0.2.2"
   }

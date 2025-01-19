@@ -18,18 +18,19 @@ Frontend application.
 
 ``Requires installing git, nodejs, npm and pm2``
 
-Install MongoDB
+Install MongoDB 4 en rocky linux
 
 Create a /etc/yum.repos.d/mongodb-org-4.4.repo file so that you can install MongoDB directly using yum:
 
 ```
+sudo dnf install dnf-plugin-versionlock
 vim /etc/yum.repos.d/mongodb-org-4.4.repo
 ```
 
 ```
 [mongodb-org-4.4]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.4/x86_64/
+baseurl=https://repo.mongodb.org/yum/redhat/8/mongodb-org/4.4/x86_64/
 gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.4.asc
